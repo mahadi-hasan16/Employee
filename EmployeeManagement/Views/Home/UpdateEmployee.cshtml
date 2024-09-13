@@ -1,0 +1,49 @@
+﻿@model EditEmployeeDto
+
+<h1>Update Employee Information</h1>
+<form method="post" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label">Id</label>
+        <input asp-for="Id" type="text" class="form-control-plaintext" value="@ViewData["Id"]" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Name" for="fullName" class="form-label">Full Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="fullName">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" for="exampleInputEmail1" class="form-label">Email address</label>
+        <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Mobile" for="mobile" class="form-label">Mobile</label>
+        <input asp-for="Mobile" type="text" class="form-control" id="mobile">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Date of Birth</label>
+        <input type="text" class="form-control-plaintext" value="@ViewData["DateOfBirth"]" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label  for="dateOfBirth" class="form-label">Date of Birth</label>
+        <input  type="date" class="form-control" id="dateOfBirth" name="DateOfBirth">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImagePath" for="photo" class="form-label">Photo</label>
+        <br>
+        <img src="~/@ViewData["ImagePath"]" width="100">
+
+    </div>
+
+    <div class="mb-3">
+        <label  for="photo" class="form-label">Upload photo</label>
+        <input  class="form-control" id="photo" name="Photo">
+    </div>
+
+    <button asp-action="AddEmployee" asp-controller="Home" type="submit" class="btn btn-primary">Submit</button>
+</form>

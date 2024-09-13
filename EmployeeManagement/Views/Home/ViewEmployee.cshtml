@@ -26,10 +26,11 @@
                     <td>@employee.Mobile</td>
                     <td>@employee.DateOfBirth</td>
                     <td>
-                        <button class="btn btn-warning">
-                            <i class="text-black fa-solid fa-user-pen"></i>
-                        </button>
-                        <button class="btn btn-danger">
+                        <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="UpdateEmployee" class="btn btn-warning">
+                            Edit
+                            @*<i class="text-black fa-solid fa-user-pen"></i>*@
+                        </a>
+                        <button asp-route-id="@employee.Id" class="btn btn-danger">
                             <i class="text-black fa-solid fa-trash"></i>
                         </button>
                     </td>

@@ -83,6 +83,32 @@ namespace EmployeeManagement.Controllers
             return RedirectToAction("ViewEmployee", "Home");
         }
 
+        public IActionResult UpdateEmployee(int id)
+        {
+            var employee = _dbContext.EmployeeInfo.Find(id);
+
+            if(employee is null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var editEmployeeDto = new EditEmployeeDto()
+            {
+                Id = employee.Id,
+                Name = employee.Name,
+                Email = employee.Email,
+                Mobile = employee.Mobile,
+                DateOfBirth = employee.DateOfBirth,
+                ImagePath = employee.ImagePath
+            };
+
+            ViewData["Id"] = employee.Id;
+            ViewData["ImagePath"] = employee.ImagePath;
+            ViewData["DateOfBirth"] = employee.DateOfBirth;
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
