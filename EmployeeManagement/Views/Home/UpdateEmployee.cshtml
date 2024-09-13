@@ -4,23 +4,23 @@
 <form method="post" enctype="multipart/form-data">
 
     <div class="mb-3">
-        <label asp-for="Id" class="form-label">Id</label>
-        <input asp-for="Id" type="text" class="form-control-plaintext" value="@ViewData["Id"]" readonly>
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control-plaintext" value="@ViewData["Id"]" readonly>
     </div>
 
     <div class="mb-3">
         <label asp-for="Name" for="fullName" class="form-label">Full Name</label>
-        <input asp-for="Name" type="text" class="form-control" id="fullName">
+        <input asp-for="Name" type="text" class="form-control" id="fullName" value="@ViewData["Name"]">
     </div>
 
     <div class="mb-3">
         <label asp-for="Email" for="exampleInputEmail1" class="form-label">Email address</label>
-        <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="@ViewData["Email"]">
     </div>
 
     <div class="mb-3">
         <label asp-for="Mobile" for="mobile" class="form-label">Mobile</label>
-        <input asp-for="Mobile" type="text" class="form-control" id="mobile">
+        <input asp-for="Mobile" type="text" class="form-control" id="mobile" value="@ViewData["Mobile"]">
     </div>
 
     <div class="mb-3">
@@ -29,21 +29,21 @@
     </div>
 
     <div class="mb-3">
-        <label  for="dateOfBirth" class="form-label">Date of Birth</label>
-        <input  type="date" class="form-control" id="dateOfBirth" name="DateOfBirth">
+        <label asp-for="DateOfBirth_" for="dateOfBirth" class="form-label">Date of Birth</label>
+        <input asp-for="DateOfBirth_" type="date" class="form-control" id="dateOfBirth" name="DateOfBirth">
     </div>
 
     <div class="mb-3">
-        <label asp-for="ImagePath" for="photo" class="form-label">Photo</label>
+        <label for="photo" class="form-label">Photo</label>
         <br>
         <img src="~/@ViewData["ImagePath"]" width="100">
 
     </div>
 
     <div class="mb-3">
-        <label  for="photo" class="form-label">Upload photo</label>
-        <input  class="form-control" id="photo" name="Photo">
+        <label asp-for="Photo"  for="photo" class="form-label">Upload photo</label>
+        <input asp-for="Photo" type="file" class="form-control" id="photo" name="Photo">
     </div>
 
-    <button asp-action="AddEmployee" asp-controller="Home" type="submit" class="btn btn-primary">Submit</button>
+    <button asp-action="UpdateEmployee" asp-controller="Home" type="submit" class="btn btn-primary">Update</button>
 </form>

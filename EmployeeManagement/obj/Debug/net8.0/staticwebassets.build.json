@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tJA5vARNCBJj8sLwznpr27UCgEJrm54rpq56vUeDmw4=",
+  "Hash": "uMapK5RKJFkup9rA7IMYW/eKV+rPSFbTkbQXuq4ZJbA=",
   "Source": "EmployeeManagement",
   "BasePath": "_content/EmployeeManagement",
   "Mode": "Default",
@@ -1195,12 +1195,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\f3bcda26-6232-49cf-a044-f6da452de009_.jpg",
+      "Identity": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png",
       "SourceId": "EmployeeManagement",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement",
-      "RelativePath": "Photoes/f3bcda26-6232-49cf-a044-f6da452de009_.jpg",
+      "RelativePath": "Photoes/a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1211,7 +1211,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Photoes\\f3bcda26-6232-49cf-a044-f6da452de009_.jpg"
+      "OriginalItemSpec": "wwwroot\\Photoes\\a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png"
     }
   ]
 }

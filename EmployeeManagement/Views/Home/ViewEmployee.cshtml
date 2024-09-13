@@ -27,12 +27,11 @@
                     <td>@employee.DateOfBirth</td>
                     <td>
                         <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="UpdateEmployee" class="btn btn-warning">
-                            Edit
-                            @*<i class="text-black fa-solid fa-user-pen"></i>*@
+                            <i class="text-black fa-solid fa-user-pen"></i>
                         </a>
-                        <button asp-route-id="@employee.Id" class="btn btn-danger">
+                        <a asp-route-id="@employee.Id" class="btn btn-danger ml-3">
                             <i class="text-black fa-solid fa-trash"></i>
-                        </button>
+                        </a>
                     </td>
                 </tr>
             }

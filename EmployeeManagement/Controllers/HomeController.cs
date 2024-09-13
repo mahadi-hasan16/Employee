@@ -103,10 +103,77 @@ namespace EmployeeManagement.Controllers
             };
 
             ViewData["Id"] = employee.Id;
-            ViewData["ImagePath"] = employee.ImagePath;
+            ViewData["Name"] = employee.Name;
+            ViewData["Email"] = employee.Email;
+            ViewData["Mobile"] = employee.Mobile;
             ViewData["DateOfBirth"] = employee.DateOfBirth;
+            ViewData["ImagePath"] = employee.ImagePath;
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateEmployee(int id, EditEmployeeDto editEmployeeDto)
+        {
+            var employee = await _dbContext.EmployeeInfo.FindAsync(id);
+
+            if (employee is null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            string relativePath = employee.ImagePath;
+            if (editEmployeeDto.Photo != null && editEmployeeDto.Photo.Length > 0)
+            {
+                if (!string.IsNullOrEmpty(employee.ImagePath))
+                {
+                    string oldImagePath = Path.Combine(_env.WebRootPath, employee.ImagePath);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                string folder = "Photoes/";
+                string extension = Path.GetExtension(editEmployeeDto.Photo.FileName);
+                string fileName = Guid.NewGuid().ToString() + "_" + extension;
+                string filePath = Path.Combine(folder, fileName);
+                string serverFolder = Path.Combine(_env.WebRootPath, filePath);
+
+                using (var image = Image.Load(editEmployeeDto.Photo.OpenReadStream()))
+                {
+                    image.Mutate(x => x.Resize(50, 50));
+                    await image.SaveAsync(serverFolder);
+                }
+
+                relativePath = filePath;
+            }
+
+            else
+            {
+                Console.WriteLine("No Image");
+            }
+            Console.WriteLine(employee.Name);
+
+            string dateOfBirth;
+            if(editEmployeeDto.DateOfBirth_ == DateTime.MinValue)
+            {
+                dateOfBirth = employee.DateOfBirth;
+            }
+            else
+            {
+                dateOfBirth = editEmployeeDto.DateOfBirth_.ToString("dd/MM/yyyy");
+            }
+
+            employee.Name = editEmployeeDto.Name;
+            employee.Email = editEmployeeDto.Email;
+            employee.Mobile = editEmployeeDto.Mobile;
+            employee.DateOfBirth = dateOfBirth;
+            employee.ImagePath = relativePath;
+
+            _dbContext.EmployeeInfo.Update(employee);
+            await _dbContext.SaveChangesAsync();
+            return RedirectToAction("ViewEmployee", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
