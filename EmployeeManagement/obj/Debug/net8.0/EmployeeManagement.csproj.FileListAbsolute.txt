@@ -137,3 +137,4 @@ D:\Developent\Dotnet\Projects\Employee\EmployeeManagement\bin\Debug\net8.0\runti
 D:\Developent\Dotnet\Projects\Employee\EmployeeManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Developent\Dotnet\Projects\Employee\EmployeeManagement\obj\Debug\net8.0\EmployeeManagement.csproj.AssemblyReference.cache
 D:\Developent\Dotnet\Projects\Employee\EmployeeManagement\obj\Debug\net8.0\Employee.61744648.Up2Date
+D:\Developent\Dotnet\Projects\Employee\EmployeeManagement\bin\Debug\net8.0\SixLabors.ImageSharp.dll

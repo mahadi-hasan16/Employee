@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LqVsi+R+TlhUMiTAufHOlO6CwLRcc45QbIw8/4xsgH5o+4mF3ke84wCL08ShFhIR2kTkeXRwHhHW3QneQ83pog==",
+  "dgSpecHash": "7IJkWn+OidXzVBWFC2QMn9Pqh6Ce6aSYnVnvG0ZoucNrHMV5xt4+PhGbNkor2HiWK69fhCPslt56A7bKSwTnQQ==",
   "success": true,
   "projectFilePath": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\EmployeeManagement.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\mahad\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\mahad\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\mahad\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\mahad\\.nuget\\packages\\sixlabors.imagesharp\\3.1.5\\sixlabors.imagesharp.3.1.5.nupkg.sha512",
     "C:\\Users\\mahad\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\mahad\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\mahad\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
