@@ -31,6 +31,12 @@ namespace EmployeeManagement.Controllers
             return View();
         }
 
+        public IActionResult ViewEmployee()
+        {
+            var employees = _dbContext.EmployeeInfo.ToList();
+            return View(employees);
+        }
+
         public IActionResult AddEmployee()
         {
             return View();
@@ -74,7 +80,7 @@ namespace EmployeeManagement.Controllers
 
             _dbContext.EmployeeInfo.Add(newEmployee);
             _dbContext.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("ViewEmployee", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

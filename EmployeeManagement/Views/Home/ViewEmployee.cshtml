@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Employee>
+<h1>View Employee</h1>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <th>
+                        <img src="~/@employee.ImagePath" alt="Employee Image" />
+                    </th>
+                    <td>@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Mobile</td>
+                    <td>@employee.DateOfBirth</td>
+                    <td>
+                        <button class="btn btn-warning">
+                            <i class="text-black fa-solid fa-user-pen"></i>
+                        </button>
+                        <button class="btn btn-danger">
+                            <i class="text-black fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div> 

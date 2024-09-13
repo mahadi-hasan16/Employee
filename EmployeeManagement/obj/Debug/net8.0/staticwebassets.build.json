@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xxu/w6sL7Mzci7vsJ0eBCLb4iNmu57vcX7cQ1f9e6Sk=",
+  "Hash": "tJA5vARNCBJj8sLwznpr27UCgEJrm54rpq56vUeDmw4=",
   "Source": "EmployeeManagement",
   "BasePath": "_content/EmployeeManagement",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\f3bcda26-6232-49cf-a044-f6da452de009_.jpg",
+      "SourceId": "EmployeeManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement",
+      "RelativePath": "Photoes/f3bcda26-6232-49cf-a044-f6da452de009_.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Photoes\\f3bcda26-6232-49cf-a044-f6da452de009_.jpg"
     }
   ]
 }
