@@ -18,7 +18,7 @@ namespace EmployeeManagement.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AddEmployee()
         {
             return View();
         }
