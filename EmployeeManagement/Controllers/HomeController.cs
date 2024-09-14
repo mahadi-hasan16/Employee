@@ -34,8 +34,40 @@ namespace EmployeeManagement.Controllers
         public IActionResult ViewEmployee()
         {
             var employees = _dbContext.EmployeeInfo.ToList();
+
             return View(employees);
         }
+
+        [HttpGet]
+        public IActionResult FindEmployee(string name, DateTime dateOfBirth, string email)
+        {
+            var employees = _dbContext.EmployeeInfo.AsQueryable();
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                employees = employees.Where(e => e.Name.Contains(name));
+            }
+
+            if (!string.IsNullOrEmpty(email))
+            {
+                employees = employees.Where(e => e.Email.Contains(email));
+            }
+
+            if (dateOfBirth != DateTime.Today)
+            {
+                employees = employees.Where(e => e.DateOfBirth == dateOfBirth.ToString("dd/MM/yyyy"));
+            }
+            
+            var filteredEmployees = employees.ToList();
+
+            if(filteredEmployees is null)
+            {
+                return NotFound();
+            }
+            
+            return View(filteredEmployees);
+        }
+
 
         public IActionResult AddEmployee()
         {

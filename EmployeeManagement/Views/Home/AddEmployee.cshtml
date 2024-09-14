@@ -4,28 +4,28 @@
 <form method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label asp-for="Name" for="fullName" class="form-label">Full Name</label>
-        <input asp-for="Name" type="text" class="form-control" id="fullName">
+        <input asp-for="Name" type="text" class="form-control" id="fullName" required>
     </div>
 
     <div class="mb-3">
         <label asp-for="Email" for="exampleInputEmail1" class="form-label">Email address</label>
-        <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
 
     <div class="mb-3">
         <label asp-for="Mobile" for="mobile" class="form-label">Mobile</label>
-        <input asp-for="Mobile" type="text" class="form-control" id="mobile">
+        <input asp-for="Mobile" type="text" class="form-control" id="mobile" required>
     </div>
 
     <div class="mb-3">
         <label asp-for="DateOfBirth" for="dateOfBirth" class="form-label">Date of Birth</label>
-        <input asp-for="DateOfBirth" type="date" class="form-control" id="dateOfBirth" name="DateOfBirth">
+        <input asp-for="DateOfBirth" type="date" class="form-control" id="dateOfBirth" name="DateOfBirth" required>
     </div>
 
     <div class="mb-3">
         <label asp-for="Photo" for="photo" class="form-label">Upload photo</label>
-        <input asp-for="Photo" class="form-control" id="photo" name="Photo">
+        <input asp-for="Photo" class="form-control" id="photo" name="Photo" required>
     </div>
 
     <button asp-action="AddEmployee" asp-controller="Home" type="submit" class="btn btn-primary">Submit</button>

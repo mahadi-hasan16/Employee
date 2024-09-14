@@ -1,41 +1,75 @@
 ﻿@model IEnumerable<Employee>
+
 <h1>View Employee</h1>
 
 <div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Photo</th>
-                <th scope="col">Full Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Date of Birth</th>
-                <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
 
-            @foreach (var employee in Model)
-            {
+    <div class="search_employee">
+        <form method="get">
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" class="form-control" required />
+                </div>
+                <div class="form-group col-3">
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="date" name="dateOfBirth" class="form-control" required />
+                </div>
+                <div class="form-group col-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="form-control" required />
+                </div>
+                <div class="col-2">
+                    <button asp-controller="Home" asp-action="FindEmployee" type="submit" class="btn btn-primary mt-4">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+   <div class="employee_list">
+        <table class="table">
+            <thead>
                 <tr>
-                    <th>
-                        <img src="~/@employee.ImagePath" alt="Employee Image" />
-                    </th>
-                    <td>@employee.Name</td>
-                    <td>@employee.Email</td>
-                    <td>@employee.Mobile</td>
-                    <td>@employee.DateOfBirth</td>
-                    <td>
-                        <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="UpdateEmployee" class="btn btn-warning">
-                            <i class="text-black fa-solid fa-user-pen"></i>
-                        </a>
-                        <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="RemoveEmployee" class="btn btn-danger ml-3">
-                            <i class="text-black fa-solid fa-trash"></i>
-                        </a>
-                    </td>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Actions</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <th>
+                            <img src="~/@employee.ImagePath" alt="Employee Image" />
+                        </th>
+                        <td>@employee.Name</td>
+                        <td>@employee.Email</td>
+                        <td>@employee.Mobile</td>
+                        <td>@employee.DateOfBirth</td>
+                        <td>
+                            <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="UpdateEmployee" class="btn btn-warning">
+                                <i class="text-black fa-solid fa-user-pen"></i>
+                            </a>
+                            <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="RemoveEmployee" class="btn btn-danger ml-3">
+                                <i class="text-black fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        @if (Model == null || !Model.Any())
+        {
+            <p class="bg-danger text-white text-center">No Data.</p>
+        }
+   </div>
+
 </div> 

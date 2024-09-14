@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Employee>
+
+
+<div class="employee_list">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <th>
+                        <img src="~/@employee.ImagePath" alt="Employee Image" />
+                    </th>
+                    <td>@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.Mobile</td>
+                    <td>@employee.DateOfBirth</td>
+                    <td>
+                        <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="UpdateEmployee" class="btn btn-warning">
+                            <i class="text-black fa-solid fa-user-pen"></i>
+                        </a>
+                        <a asp-route-id="@employee.Id" asp-controller="Home" asp-action="RemoveEmployee" class="btn btn-danger ml-3">
+                            <i class="text-black fa-solid fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    @if (Model == null || !Model.Any())
+    {
+        <p class="bg-danger text-white text-center">Data is not found.</p>
+    }
+</div>
+
+</div> 

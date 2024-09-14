@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\EmployeeManagement.bundle.scp.css"
     },
     {
+      "Id": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\75e7be4d-c7ae-4880-a99e-05ad56dd167c_.jpg",
+      "PackagePath": "staticwebassets\\Photoes\\75e7be4d-c7ae-4880-a99e-05ad56dd167c_.jpg"
+    },
+    {
       "Id": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png",
       "PackagePath": "staticwebassets\\Photoes\\a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png"
+    },
+    {
+      "Id": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\c770b9a7-c2ef-457e-b4f6-adbfb0a75c06_.png",
+      "PackagePath": "staticwebassets\\Photoes\\c770b9a7-c2ef-457e-b4f6-adbfb0a75c06_.png"
     },
     {
       "Id": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\css\\site.css",
