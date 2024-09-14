@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using EmployeeManagement.Data;
+using EmployeeManagement.Interfaces;
 using EmployeeManagement.Models;
 using EmployeeManagement.Models.DTOs;
 using EmployeeManagement.Models.Entities;
@@ -11,19 +12,13 @@ namespace EmployeeManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ApplicationDbContext _dbContext;
-
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _env;
-
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ApplicationDbContext dbContext, IWebHostEnvironment env, ILogger<HomeController> logger)
+        public HomeController(IUnitOfWork unitOfWork, IWebHostEnvironment env)
         {
-            _dbContext = dbContext;
+            _unitOfWork = unitOfWork;
 
             _env = env;
-
-            _logger = logger;
         }
 
         public IActionResult Index()
@@ -31,9 +26,9 @@ namespace EmployeeManagement.Controllers
             return View();
         }
 
-        public IActionResult ViewEmployee()
+        public async Task<IActionResult> ViewEmployee()
         {
-            var employees = _dbContext.EmployeeInfo.ToList();
+            var employees = await _unitOfWork.EmployeeRepository.GetAllEmploiesAsync();
 
             return View(employees);
         }
@@ -41,7 +36,7 @@ namespace EmployeeManagement.Controllers
         [HttpGet]
         public IActionResult FindEmployee(string name, DateTime dateOfBirth, string email, string mobile)
         {
-            var employees = _dbContext.EmployeeInfo.AsQueryable();
+            var employees = _unitOfWork.EmployeeRepository.EmployeeQuery();
 
             if (!string.IsNullOrEmpty(name))
             {
@@ -115,14 +110,14 @@ namespace EmployeeManagement.Controllers
                 ImagePath = relativePath
             };
 
-            _dbContext.EmployeeInfo.Add(newEmployee);
-            _dbContext.SaveChanges();
+            await _unitOfWork.EmployeeRepository.AddEmployeeAsync(newEmployee);
+            await _unitOfWork.SaveChangesAsync();
             return RedirectToAction("ViewEmployee", "Home");
         }
 
-        public IActionResult UpdateEmployee(int id)
+        public async Task<IActionResult> UpdateEmployee(int id)
         {
-            var employee = _dbContext.EmployeeInfo.Find(id);
+            var employee = await _unitOfWork.EmployeeRepository.FindEmployeeAsync(id);
 
             if(employee is null)
             {
@@ -152,7 +147,7 @@ namespace EmployeeManagement.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateEmployee(int id, EditEmployeeDto editEmployeeDto)
         {
-            var employee = await _dbContext.EmployeeInfo.FindAsync(id);
+            var employee = await _unitOfWork.EmployeeRepository.FindEmployeeAsync(id);
 
             if (employee is null)
             {
@@ -208,22 +203,23 @@ namespace EmployeeManagement.Controllers
             employee.DateOfBirth = dateOfBirth;
             employee.ImagePath = relativePath;
 
-            _dbContext.EmployeeInfo.Update(employee);
-            await _dbContext.SaveChangesAsync();
+            _unitOfWork.EmployeeRepository.UpdateEmployeeInfo(employee);
+            await _unitOfWork.SaveChangesAsync();
             return RedirectToAction("ViewEmployee", "Home");
         }
 
         public async Task<IActionResult> RemoveEmployee(int id)
         {
-            var employee = await _dbContext.EmployeeInfo.FindAsync(id);
+            var employee = await _unitOfWork.EmployeeRepository.FindEmployeeAsync(id);
 
             if (employee is null)
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            _dbContext.EmployeeInfo.Remove(employee);
-            _dbContext.SaveChanges();
+            _unitOfWork.EmployeeRepository.RemoveEmployee(id);
+
+            await _unitOfWork.SaveChangesAsync();
             return RedirectToAction("ViewEmployee", "Home");
         }
 

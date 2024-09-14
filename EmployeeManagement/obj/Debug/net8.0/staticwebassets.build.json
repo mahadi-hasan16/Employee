@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pM1fvhhIl6R9RK6xxWGwt+E+FIFrTJLNRvzOyvr2umw=",
+  "Hash": "byZaRessFTj2n+oG8Kvq7HdttlSkd+abGQxt7S2+uNQ=",
   "Source": "EmployeeManagement",
   "BasePath": "_content/EmployeeManagement",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Photoes\\a64b78b0-d345-4be7-8412-9dc4ad2ab74c_.png"
+    },
+    {
+      "Identity": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\b52af002-23d4-4a93-90da-4106a14606b1_.jpg",
+      "SourceId": "EmployeeManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagement",
+      "RelativePath": "Photoes/b52af002-23d4-4a93-90da-4106a14606b1_.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Photoes\\b52af002-23d4-4a93-90da-4106a14606b1_.jpg"
     },
     {
       "Identity": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\wwwroot\\Photoes\\c770b9a7-c2ef-457e-b4f6-adbfb0a75c06_.png",
