@@ -176,6 +176,20 @@ namespace EmployeeManagement.Controllers
             return RedirectToAction("ViewEmployee", "Home");
         }
 
+        public async Task<IActionResult> RemoveEmployee(int id)
+        {
+            var employee = await _dbContext.EmployeeInfo.FindAsync(id);
+
+            if (employee is null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            _dbContext.EmployeeInfo.Remove(employee);
+            _dbContext.SaveChanges();
+            return RedirectToAction("ViewEmployee", "Home");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
