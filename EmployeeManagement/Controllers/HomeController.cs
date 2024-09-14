@@ -217,6 +217,12 @@ namespace EmployeeManagement.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
+            string oldImagePath = Path.Combine(_env.WebRootPath, employee.ImagePath);
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
             _unitOfWork.EmployeeRepository.RemoveEmployee(id);
 
             await _unitOfWork.SaveChangesAsync();

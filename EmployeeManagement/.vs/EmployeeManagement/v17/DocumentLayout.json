@@ -70,8 +70,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T17:50:57.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:50:57.106Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "Data\\UnitOfWork.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAA0wBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T17:47:40.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:47:40.433Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "RelativeToolTip": "Repositories\\EmployeeRepository.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAIwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T17:28:58.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:28:58.054Z"
             },
             {
               "$type": "Document",
@@ -109,8 +106,7 @@
               "RelativeToolTip": "Interfaces\\IUnitOfWork.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T17:26:56.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:26:56.263Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "RelativeToolTip": "Interfaces\\IEmployeeRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T17:16:00.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:16:00.981Z"
             },
             {
               "$type": "Document",
@@ -133,7 +128,7 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAMkAAAAAAAAAAAAYwNIAAAA/AAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAgwNIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T15:38:46.88Z",
               "EditorCaption": ""
@@ -141,15 +136,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "EmployeeManagement",
+              "Title": "EmployeeManagement.csproj",
               "DocumentMoniker": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\EmployeeManagement.csproj",
               "RelativeDocumentMoniker": "EmployeeManagement.csproj",
               "ToolTip": "D:\\Developent\\Dotnet\\Projects\\Employee\\EmployeeManagement\\EmployeeManagement.csproj",
               "RelativeToolTip": "EmployeeManagement.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-14T17:13:17.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T17:13:17.46Z"
             },
             {
               "$type": "Document",
@@ -161,8 +155,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAACQAAAAAAAAAAAAywC0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-14T15:57:43.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T15:57:43.06Z"
             },
             {
               "$type": "Document",
