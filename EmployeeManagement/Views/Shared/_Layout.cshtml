@@ -37,13 +37,40 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - EmployeeManagement - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container text-center">
+            Copyright 2024 | Md. Mahadi Hasan
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Include DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+
+    <!-- Include DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('#employee_list').DataTable(
+                {
+                    pageLength: 10,
+                    dom: 'rtip'
+                });
+
+            $('#find_employee_table').DataTable(
+                {
+                    pageLength: 10,
+                    dom: 'rtip'
+                });
+        });
+
+    </script>
+
 </body>
 </html>

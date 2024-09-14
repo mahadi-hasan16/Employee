@@ -2,7 +2,7 @@
 
 
 <div class="employee_list">
-    <table class="table">
+    <table id="find_employee_table" class="table">
         <thead>
             <tr>
                 <th scope="col">Photo</th>
@@ -38,10 +38,7 @@
 
         </tbody>
     </table>
-    @if (Model == null || !Model.Any())
-    {
-        <p class="bg-danger text-white text-center">Data is not found.</p>
-    }
+ 
 </div>
 
 </div> 

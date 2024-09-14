@@ -39,7 +39,7 @@ namespace EmployeeManagement.Controllers
         }
 
         [HttpGet]
-        public IActionResult FindEmployee(string name, DateTime dateOfBirth, string email)
+        public IActionResult FindEmployee(string name, DateTime dateOfBirth, string email, string mobile)
         {
             var employees = _dbContext.EmployeeInfo.AsQueryable();
 
@@ -51,6 +51,11 @@ namespace EmployeeManagement.Controllers
             if (!string.IsNullOrEmpty(email))
             {
                 employees = employees.Where(e => e.Email.Contains(email));
+            }
+
+            if (!string.IsNullOrEmpty(mobile))
+            {
+                employees = employees.Where(e => e.Mobile.Contains(mobile));
             }
 
             if (dateOfBirth != DateTime.Today)
