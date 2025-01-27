@@ -1,4 +1,4 @@
-# Assignment for the Internship 
+
 # Functionalities:
 01. Add an employee.
 02. Update employee information.
